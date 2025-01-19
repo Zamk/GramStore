@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E66A1E35-CA1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nomenclature", "Nomenclature", "{3BD0E8E0-5994-4996-AD40-7EBB27F99D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Nomenclature.Domain", "GramStore.Nomenclature.Domain\GramStore.Nomenclature.Domain.csproj", "{4E722BF5-DF22-47C9-8BCE-5AA05A2B31C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Nomenclature.Domain", "src\Nomenclature\GramStore.Nomenclature.Domain\GramStore.Nomenclature.Domain.csproj", "{E352DC7D-8712-4375-93E5-DED8AC8740A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +15,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4E722BF5-DF22-47C9-8BCE-5AA05A2B31C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E722BF5-DF22-47C9-8BCE-5AA05A2B31C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E722BF5-DF22-47C9-8BCE-5AA05A2B31C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E722BF5-DF22-47C9-8BCE-5AA05A2B31C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E352DC7D-8712-4375-93E5-DED8AC8740A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E352DC7D-8712-4375-93E5-DED8AC8740A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E352DC7D-8712-4375-93E5-DED8AC8740A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E352DC7D-8712-4375-93E5-DED8AC8740A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3BD0E8E0-5994-4996-AD40-7EBB27F99D4D} = {E66A1E35-CA16-4F6B-96EA-AD5DA6DC3911}
-		{4E722BF5-DF22-47C9-8BCE-5AA05A2B31C5} = {3BD0E8E0-5994-4996-AD40-7EBB27F99D4D}
+		{E352DC7D-8712-4375-93E5-DED8AC8740A6} = {3BD0E8E0-5994-4996-AD40-7EBB27F99D4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49F29ABC-6515-41BA-B72B-CF539A12B783}
