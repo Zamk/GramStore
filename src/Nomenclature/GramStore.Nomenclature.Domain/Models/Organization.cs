@@ -2,11 +2,10 @@
 
 namespace GramStore.Nomenclature.Domain.Models
 {
-    public class Organization
+    public class Organization : Entity
     {
         public const int MAX_NAME_LENGTH = 256;
 
-        public long Id { get; }
         public long ClientId { get; }
         public string Name { get; } = string.Empty;
 
