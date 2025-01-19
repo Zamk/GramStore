@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GramStore.Nomenclature.Domain.Models;
 
 namespace GramStore.Nomenclature.Domain.Interfaces.Repositories
 {
     public interface IOrganizationRepository
     {
-
+        public Task Create(Organization organization);
+        public Task<Organization> GetById(long id);
+        public Task<List<Organization>> GetByClientId(long clientId);
     }
 }

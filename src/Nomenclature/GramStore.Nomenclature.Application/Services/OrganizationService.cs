@@ -1,4 +1,5 @@
 ﻿using CSharpFunctionalExtensions;
+using GramStore.Nomenclature.Domain.Interfaces.Repositories;
 using GramStore.Nomenclature.Domain.Interfaces.Services;
 using GramStore.Nomenclature.Domain.Models;
 
@@ -6,27 +7,42 @@ namespace GramStore.Nomenclature.Application.Services
 {
     public class OrganizationService : IOrganizationService
     {
-        public Task<Result<Organization>> CreateOrganization(
+        private readonly IOrganizationRepository _organizationRepository;
+
+        public OrganizationService(
+            IOrganizationRepository organizationRepository
+            ) 
+        {
+            _organizationRepository = organizationRepository;
+        }
+
+        public async Task<Result<Organization>> CreateOrganization(
             long clientId,
             string name
             )
         {
-            var organization = Organization.Create(
+            var organizationResult = Organization.Create(
                 Random.Shared.NextInt64(), 
                 clientId,
                 name);
 
-            return Task.FromResult(organization);
+            await _organizationRepository.Create(organizationResult.Value);
+
+            return organizationResult;
         }
 
-        public Task<Result<Organization>> GetOrganizationByClientId(long clientId)
+        public async Task<Result<List<Organization>>> GetOrganizationsByClientId(long clientId)
         {
-            throw new NotImplementedException();
+            var organizations = await _organizationRepository.GetByClientId( clientId );
+
+            return Result.Success(organizations);
         }
 
-        public Task<Result<Organization>> GetOrganizationById(long id)
+        public async Task<Result<Organization>> GetOrganizationById(long id)
         {
-            throw new NotImplementedException();
+            var organization = await _organizationRepository.GetById(id);
+
+            return Result.Success(organization);
         }
 
         public Task<Result<Organization>> UpdateOrganization()

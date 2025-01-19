@@ -1,4 +1,5 @@
 using GramStore.Nomenclature.Application;
+using GramStore.Nomenclature.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplicationServices();
-
+builder.Services.AddRepositories();
 
 var app = builder.Build();
 
