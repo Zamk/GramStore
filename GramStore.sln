@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Nomenclature.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Nomenclature.Persistence", "src\Nomenclature\GramStore.Nomenclature.Persistence\GramStore.Nomenclature.Persistence.csproj", "{C8998950-D7F7-4740-9F8C-A6E670901FCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Nomenclature.API", "src\Nomenclature\GramStore.Nomenclature.API\GramStore.Nomenclature.API.csproj", "{18B12C45-0640-495E-A99C-6AF93550F8CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Nomenclature.Application", "src\Nomenclature\GramStore.Nomenclature.Application\GramStore.Nomenclature.Application.csproj", "{C5F403BC-5AFB-4CA2-A752-BDED9D03ABF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{C8998950-D7F7-4740-9F8C-A6E670901FCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8998950-D7F7-4740-9F8C-A6E670901FCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8998950-D7F7-4740-9F8C-A6E670901FCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18B12C45-0640-495E-A99C-6AF93550F8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B12C45-0640-495E-A99C-6AF93550F8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B12C45-0640-495E-A99C-6AF93550F8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B12C45-0640-495E-A99C-6AF93550F8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F403BC-5AFB-4CA2-A752-BDED9D03ABF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F403BC-5AFB-4CA2-A752-BDED9D03ABF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F403BC-5AFB-4CA2-A752-BDED9D03ABF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F403BC-5AFB-4CA2-A752-BDED9D03ABF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +45,8 @@ Global
 		{3BD0E8E0-5994-4996-AD40-7EBB27F99D4D} = {E66A1E35-CA16-4F6B-96EA-AD5DA6DC3911}
 		{E352DC7D-8712-4375-93E5-DED8AC8740A6} = {3BD0E8E0-5994-4996-AD40-7EBB27F99D4D}
 		{C8998950-D7F7-4740-9F8C-A6E670901FCF} = {3BD0E8E0-5994-4996-AD40-7EBB27F99D4D}
+		{18B12C45-0640-495E-A99C-6AF93550F8CC} = {3BD0E8E0-5994-4996-AD40-7EBB27F99D4D}
+		{C5F403BC-5AFB-4CA2-A752-BDED9D03ABF8} = {3BD0E8E0-5994-4996-AD40-7EBB27F99D4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49F29ABC-6515-41BA-B72B-CF539A12B783}

@@ -7,7 +7,7 @@ namespace GramStore.Nomenclature.Domain.Models
         public const int MAX_NAME_LENGTH = 128;
         public const int MAX_DESCRIPTION_LENGTH = 1024;
 
-        public long OrganizationId { get; }
+        public Organization Organization { get; }
         public Category Category { get; }
         public string Name { get; } = string.Empty;
         public string Description { get; } = string.Empty;
@@ -16,7 +16,7 @@ namespace GramStore.Nomenclature.Domain.Models
 
         private Product(
             long id, 
-            long organizationId, 
+            Organization organization, 
             Category category, 
             string name, 
             string description, 
@@ -24,7 +24,7 @@ namespace GramStore.Nomenclature.Domain.Models
             decimal price)
         {
             Id = id;
-            OrganizationId = organizationId;
+            Organization = organization;
             Category = category;
             Name = name;
             Description = description;
@@ -34,7 +34,7 @@ namespace GramStore.Nomenclature.Domain.Models
 
         public Result<Product> Create(
             long id,
-            long organizationId,
+            Organization organization,
             Category category,
             string name,
             string description,
@@ -44,11 +44,6 @@ namespace GramStore.Nomenclature.Domain.Models
             if (id == 0)
             {
                 return Result.Failure<Product>("Id cannot be 0");
-            }
-
-            if (organizationId == 0)
-            {
-                return Result.Failure<Product>("Organization id cannot be 0");
             }
 
             if (string.IsNullOrEmpty(name))
@@ -76,7 +71,7 @@ namespace GramStore.Nomenclature.Domain.Models
                 return Result.Failure<Product>($"Price cannot be negative");
             }
 
-            var product = new Product(id, organizationId, category, name, description, image, price);
+            var product = new Product(id, organization, category, name, description, image, price);
 
             return Result.Success(product);
         }
