@@ -15,7 +15,6 @@ namespace GramStore.Nomenclature.Domain.Models
         public decimal Price { get; }
 
         private Product(
-            long id, 
             Organization organization, 
             Category category, 
             string name, 
@@ -23,7 +22,6 @@ namespace GramStore.Nomenclature.Domain.Models
             Image image, 
             decimal price)
         {
-            Id = id;
             Organization = organization;
             Category = category;
             Name = name;
@@ -33,7 +31,6 @@ namespace GramStore.Nomenclature.Domain.Models
         }
 
         public Result<Product> Create(
-            long id,
             Organization organization,
             Category category,
             string name,
@@ -41,11 +38,6 @@ namespace GramStore.Nomenclature.Domain.Models
             Image image,
             decimal price) 
         {
-            if (id == 0)
-            {
-                return Result.Failure<Product>("Id cannot be 0");
-            }
-
             if (string.IsNullOrEmpty(name))
             {
                 return Result.Failure<Product>("Name cannot be null or empty");
@@ -71,10 +63,9 @@ namespace GramStore.Nomenclature.Domain.Models
                 return Result.Failure<Product>($"Price cannot be negative");
             }
 
-            var product = new Product(id, organization, category, name, description, image, price);
+            var product = new Product(organization, category, name, description, image, price);
 
             return Result.Success(product);
         }
-
     }
 }
