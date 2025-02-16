@@ -11,7 +11,7 @@ namespace GramStore.Nomenclature.Domain.Models
             Link = link;
         }
 
-        public Result<Image> Create(string link)
+        public static Result<Image> Create(string link)
         {
             if (string.IsNullOrEmpty(link))
             {

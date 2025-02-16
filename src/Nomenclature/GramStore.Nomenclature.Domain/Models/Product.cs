@@ -30,7 +30,7 @@ namespace GramStore.Nomenclature.Domain.Models
             Price = price;
         }
 
-        public Result<Product> Create(
+        public static Result<Product> Create(
             Organization organization,
             Category category,
             string name,
