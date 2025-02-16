@@ -8,7 +8,10 @@ namespace GramStore.Nomenclature.Application
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            return services.AddScoped<IOrganizationService, OrganizationService>();
+            services.AddScoped<IOrganizationService, OrganizationService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+
+            return services;
         }
     }
 }
