@@ -6,22 +6,23 @@ namespace GramStore.Nomenclature.Domain.Models
     {
         public const int MAX_NAME_LENGTH = 256;
 
-        public long ClientId { get; }
-        public string Name { get; } = string.Empty;
+        public long ClientId { get; protected set; }
+        public string Name { get; protected set; } = string.Empty;
 
-        private Organization(long id, long clientId, string name) 
+        protected Organization() { }
+        private Organization(long clientId, string name) 
         {
-            Id = id;
+            //Id = id;
             ClientId = clientId;
             Name = name;
         }
 
-        public static Result<Organization> Create(long id, long clientId, string name)
+        public static Result<Organization> Create(long clientId, string name)
         {
-            if (id == 0)
-            {
-                return Result.Failure<Organization>("Id cannot be 0");
-            }
+            //if (id == 0)
+            //{
+            //    return Result.Failure<Organization>("Id cannot be 0");
+            //}
 
             if (clientId == 0)
             {
@@ -38,7 +39,7 @@ namespace GramStore.Nomenclature.Domain.Models
                 return Result.Failure<Organization>($"Name id cannot be more than {MAX_NAME_LENGTH} length");
             }
 
-            var organization = new Organization(id, clientId, name);
+            var organization = new Organization(clientId, name);
 
             return Result.Success(organization);
         }

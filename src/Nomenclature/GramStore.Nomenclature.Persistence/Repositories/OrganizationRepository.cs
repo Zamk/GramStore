@@ -1,34 +1,41 @@
-﻿using GramStore.Nomenclature.Domain.Interfaces.Repositories;
+﻿using GramStore.Nomenclature.Domain.Exceptions;
+using GramStore.Nomenclature.Domain.Interfaces.Repositories;
 using GramStore.Nomenclature.Domain.Models;
 
 namespace GramStore.Nomenclature.Persistence.Repositories
 {
     public class OrganizationRepository : IOrganizationRepository
     {
-        private readonly List<Organization> _organizations;
+        private readonly ApplicationContext _context;
 
-        public OrganizationRepository() 
-        { 
-            _organizations = new List<Organization>();
+        public OrganizationRepository(
+            ApplicationContext context
+            ) 
+        {
+            _context = context;
         }
 
-        public Task Create(Organization organization)
+        public async Task Create(Organization organization)
         {
-            _organizations.Add(organization);
-
-            return Task.CompletedTask;
+            _context.Organizations.Add(organization);
+            await _context.SaveChangesAsync();
         }
 
         public Task<List<Organization>> GetByClientId(long clientId)
         {
-            var organizations = _organizations.Where(org => org.ClientId == clientId).ToList();
+            var organizations = _context.Organizations
+                .Where(o => o.ClientId == clientId)
+                .ToList();
 
             return Task.FromResult(organizations);
         }
 
         public Task<Organization> GetById(long id)
         {
-            var organization = _organizations.First(org => org.Id == id);
+            var organization = _context.Organizations.FirstOrDefault(org => org.Id == id);
+
+            if (organization is null)
+                throw new NotFoundException(nameof(organization), id);
 
             return Task.FromResult(organization);
         }

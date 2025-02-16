@@ -8,7 +8,9 @@ namespace GramStore.Nomenclature.Persistence
     {
         public static IServiceCollection AddRepositories(this IServiceCollection services)
         {
-            services.AddSingleton<IOrganizationRepository, OrganizationRepository>();
+            services.AddScoped<IOrganizationRepository, OrganizationRepository>();
+
+            services.AddDbContext<ApplicationContext>();
 
             return services;
         }
