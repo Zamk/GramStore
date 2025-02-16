@@ -18,5 +18,17 @@ namespace GramStore.Nomenclature.Persistence
         {
             optionsBuilder.UseInMemoryDatabase("OrganizationsDataBase");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>(productBuilder =>
+            {
+                productBuilder.HasOne(p => p.Organization);
+                productBuilder.ComplexProperty(p => p.Image, imageBuilder =>
+                {
+                    imageBuilder.Property(ip => ip.Link);
+                });
+            });
+        }
     }
 }

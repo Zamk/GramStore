@@ -7,12 +7,16 @@ namespace GramStore.Nomenclature.Domain.Models
         public const int MAX_NAME_LENGTH = 128;
         public const int MAX_DESCRIPTION_LENGTH = 1024;
 
-        public Organization Organization { get; }
-        public Category Category { get; }
-        public string Name { get; } = string.Empty;
-        public string Description { get; } = string.Empty;
-        public Image Image { get; }
-        public decimal Price { get; }
+        public Organization Organization { get; protected set; }
+        public long OrganizationId { get; protected set; }
+        public Category Category { get; protected set; }
+        public long CategoryId { get; protected set; }
+        public string Name { get; protected set; } = string.Empty;
+        public string Description { get; protected set; } = string.Empty;
+        public Image Image { get; protected set; }
+        public decimal Price { get; protected set; }
+
+        private Product() { }
 
         private Product(
             Organization organization, 
@@ -23,7 +27,9 @@ namespace GramStore.Nomenclature.Domain.Models
             decimal price)
         {
             Organization = organization;
+            OrganizationId = organization.Id;
             Category = category;
+            CategoryId = category.Id;
             Name = name;
             Description = description;
             Image = image;

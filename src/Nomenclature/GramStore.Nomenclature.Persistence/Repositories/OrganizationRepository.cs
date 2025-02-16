@@ -35,7 +35,7 @@ namespace GramStore.Nomenclature.Persistence.Repositories
             var organization = _context.Organizations.FirstOrDefault(org => org.Id == id);
 
             if (organization is null)
-                throw new NotFoundException(nameof(organization), id);
+                throw new NotFoundException(typeof(Organization), id);
 
             return Task.FromResult(organization);
         }

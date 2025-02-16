@@ -77,7 +77,7 @@ namespace GramStore.Nomenclature.Application.Services
             }
         }
         
-        public async Task<Result<List<Product>>> GetProductByOrganizationId(long organizationId)
+        public async Task<Result<List<Product>>> GetProductsByOrganizationId(long organizationId)
         {
             try
             {

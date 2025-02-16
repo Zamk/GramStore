@@ -10,6 +10,7 @@ namespace GramStore.Nomenclature.Persistence
         {
             services.AddScoped<IOrganizationRepository, OrganizationRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             services.AddDbContext<ApplicationContext>();
 

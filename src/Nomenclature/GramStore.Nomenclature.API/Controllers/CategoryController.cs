@@ -19,7 +19,7 @@ namespace GramStore.Nomenclature.API.Controllers
 
         [HttpGet]
         [Route("byOrganizationId/{organizationId}")]
-        public async Task<ActionResult> GetByClientId([FromRoute] long organizationId)
+        public async Task<ActionResult> GetByOrganizationId([FromRoute] long organizationId)
         {
             var categoriesResult = await _categoryService.GetCategoriesByOrganizationId(organizationId);
 

@@ -22,21 +22,20 @@ namespace GramStore.Nomenclature.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Product> GetById(long id)
+        public Task<Product> GetById(long id)
         {
             var product = _context.Products.FirstOrDefault(p => p.Id == id);
 
             if (product is null)
                 throw new NotFoundException(typeof(Product), id);
 
-            return product;
+            return Task.FromResult(product);
         }
 
         public async Task<List<Product>> GetByOrganization(long organizationId)
         {
             return await _context.Products
-                .Include(p => p.Organization)
-                .Where(p => p.Organization.Id == organizationId)
+                .Where(p => p.OrganizationId == organizationId)
                 .ToListAsync();
         }
     }
