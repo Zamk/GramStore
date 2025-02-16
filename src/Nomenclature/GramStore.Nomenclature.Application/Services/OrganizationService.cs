@@ -22,7 +22,6 @@ namespace GramStore.Nomenclature.Application.Services
             )
         {
             var organizationResult = Organization.Create(
-                //Random.Shared.NextInt64(), 
                 clientId,
                 name);
 

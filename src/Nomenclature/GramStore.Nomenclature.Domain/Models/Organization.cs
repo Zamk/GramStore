@@ -12,18 +12,12 @@ namespace GramStore.Nomenclature.Domain.Models
         protected Organization() { }
         private Organization(long clientId, string name) 
         {
-            //Id = id;
             ClientId = clientId;
             Name = name;
         }
 
         public static Result<Organization> Create(long clientId, string name)
         {
-            //if (id == 0)
-            //{
-            //    return Result.Failure<Organization>("Id cannot be 0");
-            //}
-
             if (clientId == 0)
             {
                 return Result.Failure<Organization>("Client id cannot be 0");
