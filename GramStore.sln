@@ -17,13 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GramStore.Nomenclature.Appl
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{655CA7F5-04A4-4837-8F3F-B0B7883C223A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Client.Domain", "src\Client\GramStore.Client.Domain\GramStore.Client.Domain.csproj", "{CDF9608B-C6F2-429E-ADFA-58ABBB062DE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Clients.Domain", "src\Client\GramStore.Client.Domain\GramStore.Clients.Domain.csproj", "{CDF9608B-C6F2-429E-ADFA-58ABBB062DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Client.Persistence", "src\Client\GramStore.Client.Persistence\GramStore.Client.Persistence.csproj", "{9630FAE9-1F24-48F0-A98B-C2C65BE94387}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Clients.Persistence", "src\Client\GramStore.Client.Persistence\GramStore.Clients.Persistence.csproj", "{9630FAE9-1F24-48F0-A98B-C2C65BE94387}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Client.Application", "src\Client\GramStore.Client.Application\GramStore.Client.Application.csproj", "{0F8461C2-E2AB-423F-8B28-688F9C0B4E71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Clients.Application", "src\Client\GramStore.Client.Application\GramStore.Clients.Application.csproj", "{0F8461C2-E2AB-423F-8B28-688F9C0B4E71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Client.API", "src\Client\GramStore.Client.API\GramStore.Client.API.csproj", "{8F9822A3-FD32-4095-B176-EF2B4DB90052}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GramStore.Clients.API", "src\Client\GramStore.Client.API\GramStore.Clients.API.csproj", "{8F9822A3-FD32-4095-B176-EF2B4DB90052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

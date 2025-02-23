@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\GramStore.Client.Application\GramStore.Clients.Application.csproj" />
+    <ProjectReference Include="..\GramStore.Client.Domain\GramStore.Clients.Domain.csproj" />
+    <ProjectReference Include="..\GramStore.Client.Persistence\GramStore.Clients.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

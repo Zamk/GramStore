@@ -1,8 +1,8 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace GramStore.Client.Domain.Models
+namespace GramStore.Clients.Domain.Models
 {
-    internal class Client : Entity
+    public class Client : Entity
     {
         public string Name { get; protected set; }
         public long TelegramId { get; protected set; }

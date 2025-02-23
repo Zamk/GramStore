@@ -1,6 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
 
-namespace GramStore.Client.Domain.Models
+namespace GramStore.Clients.Domain.Models
 {
     public class Email : ValueObject
     {
