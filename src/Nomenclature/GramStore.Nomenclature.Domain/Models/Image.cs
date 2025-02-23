@@ -4,7 +4,9 @@ namespace GramStore.Nomenclature.Domain.Models
 {
     public class Image : ValueObject
     {
-        public string Link { get; } = string.Empty;
+        public string Link { get; protected set; } = string.Empty;
+
+        private Image() { }
 
         private Image(string link) 
         { 
