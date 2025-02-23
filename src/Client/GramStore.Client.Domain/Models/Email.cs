@@ -13,7 +13,7 @@ namespace GramStore.Clients.Domain.Models
             EmailAddress = emailAddress;
         }
 
-        public static Result<Email> Create(string emailAddress)
+        public static Result<Email> Create(string? emailAddress)
         {
             if (string.IsNullOrWhiteSpace(emailAddress))
             {

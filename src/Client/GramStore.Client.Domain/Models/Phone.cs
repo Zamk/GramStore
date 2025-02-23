@@ -13,7 +13,7 @@ namespace GramStore.Clients.Domain.Models
             PhoneNumber = phoneNumber;
         }
 
-        public static Result<Phone> Create(string phoneNumber)
+        public static Result<Phone> Create(string? phoneNumber)
         {
             if (string.IsNullOrWhiteSpace(phoneNumber))
             {

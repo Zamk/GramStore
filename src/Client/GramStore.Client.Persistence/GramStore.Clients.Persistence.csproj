@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GramStore.Client.Domain\GramStore.Clients.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
